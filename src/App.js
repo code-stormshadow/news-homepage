@@ -48,7 +48,7 @@ function App() {
           </div>
           <div className="font-inter xl:grid grid-cols-2 grid-rows-2 gap-6 w-full">
             <div className="lg:flex col-span-1">
-              <img className="w-[650x]" src={imageWebdesktop} alt=""></img>
+              <img className="lg:w-[300px] xl:w-[650px]" src={imageWebdesktop} alt=""></img>
             </div>
             <div className="lg: row-span-2 bg-black pl-5 md:w-80 h-6/12">
               <h1 className="mt-8 mb-4 text-orange-300 text-3xl font-inter font-semibold">
