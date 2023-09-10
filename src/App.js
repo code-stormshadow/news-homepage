@@ -28,7 +28,7 @@ function App() {
                 <img className="mr-6" src={logo} alt="icon"></img>
               </div>
             </div>
-            <div className="flex xl:space-x-6 w-3/3 mt-3 ml-64">
+            <div className="flex lg:lg:space-x-6 w-3/3 mt-3 ml-12 xl:space-x-6 w-3/3 mt-3 ml-64">
               <h2 className=" hover:text-red-600 font-inter text-base font-light">
                 Home
               </h2>
