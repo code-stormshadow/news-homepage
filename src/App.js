@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <div className="lg:container mx-10 px-5 xl:container xl:mx-32 xl:px-18">
+    <div className="xl:container xl:mx-32 xl:px-18">
       <div className="content-Div">
         <div className="hidden md:block">
           <div className="flex mb-7 mt-5 xl:w-9/12 gap-80">
@@ -28,7 +28,7 @@ function App() {
                 <img className="mr-6" src={logo} alt="icon"></img>
               </div>
             </div>
-            <div className="flex lg:lg:space-x-6 w-3/3 mt-3 ml-12 xl:space-x-6 w-3/3 mt-3 ml-64">
+            <div className="flex xl:space-x-6 w-3/3 mt-3 ml-64">
               <h2 className=" hover:text-red-600 font-inter text-base font-light">
                 Home
               </h2>
@@ -47,10 +47,10 @@ function App() {
             </div>
           </div>
           <div className="font-inter xl:grid grid-cols-2 grid-rows-2 gap-6 w-full">
-            <div className="lg:flex col-span-1">
-              <img className="lg:w-[300px] xl:w-[650px]" src={imageWebdesktop} alt=""></img>
+            <div className="xl:flex col-span-1">
+              <img className=" xl:w-[650px]" src={imageWebdesktop} alt=""></img>
             </div>
-            <div className="lg: row-span-2 bg-black pl-5 md:w-80 h-6/12">
+            <div className="xl: row-span-2 bg-black pl-5 md:w-80 h-6/12">
               <h1 className="mt-8 mb-4 text-orange-300 text-3xl font-inter font-semibold">
                 New
               </h1>
