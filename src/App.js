@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <div className="xl:container xl:mx-32 xl:px-18">
+    <div className="lg:container mx-10 px-5 xl:container xl:mx-32 xl:px-18">
       <div className="content-Div">
         <div className="hidden md:block">
           <div className="flex mb-7 mt-5 xl:w-9/12 gap-80">
