@@ -15,7 +15,7 @@ const MobileMenu = ({ toggleMenu }) => {
   // };
 
   return (
-    <div className="container absolute w-screen h-screen -top-10 -left-10">
+    <div className="container absolute w-screen ml-6 h-screen -top-10 -left-10">
       <div className="flex flex-row h-full">
         <div className=" block bg-black bg-opacity-70 h-full w-5/6 "></div>
         <div className="bg-white pl-3 flex flex-col w-screen">

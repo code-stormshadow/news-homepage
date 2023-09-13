@@ -9,6 +9,7 @@ import logo from "./assets/images/logo.svg";
 import imageretropcs from "./assets/images/imageretropcs.jpg";
 import imagetoplaptops from "./assets/images/imagetoplaptops.jpg";
 import imagegaminggrowth from "./assets/images/imagegaminggrowth.jpg";
+import { useEffect } from "react";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,12 +18,26 @@ function App() {
     console.log("isMenuOpen");
     setIsMenuOpen(!isMenuOpen);
   };
+  useEffect(() => {
+    if (isMenuOpen) {
+      // Disable scrolling on the body element
+      document.body.style.overflow = "hidden";
+    } else {
+      // Enable scrolling on the body element
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      // Cleanup: Enable scrolling when the component unmounts
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
 
   return (
-    <div className="lg:container lg:mx-10 lg:px-5 xl:container xl:mx-32 xl:px-18">
+    <div className="container md:screen md:mx-20 lg:mx-20 lg:px-5 xl:mx-32 xl:px-18">
       <div className="content-Div">
-        <div className="hidden md:block">
-          <div className="flex mb-7 mt-5 lg:w-[940px] lg:gap-72 xl:w-9/12 xl:gap-80">
+        <div className="hidden md:block md:w-full">
+          <div className="flex mb-7 mt-5 md:w-full md:gap-32 lg:w-[940px] lg:gap-72 xl:w-9/12 xl:gap-80">
             <div className="md:">
               <div>
                 <img className="mr-52" src={logo} alt="icon"></img>
@@ -46,11 +61,11 @@ function App() {
               </h3>
             </div>
           </div>
-          <div className="font-inter flex lg:w-full lg:grid lg:grid-cols-2 lg:grid-rows-2 xl:font-inter xl:grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-6 xl:w-full">
-            <div className="lg:w-max lg:h-[270px] border border-black xl:flex xl:w-full xl:col-span-1 xl:h-full">
-              <img className="lg:w-[600px] lg:h-[270px] xl:w-[690px]" src={imageWebdesktop} alt=""></img>
+          <div className="font-inter flex grid grid-cols-2 grid-rows-2 lg:w-full xl:gap-6 xl:w-full">
+            <div className="md:w-[430px] md:h-[270px] lg:w-max lg:h-[270px] xl:flex xl:w-full xl:col-span-1 xl:h-full">
+              <img className="md:w-[500px] md:h-full lg:w-[600px] lg:h-[270px] xl:w-[690px]" src={imageWebdesktop} alt=""></img>
             </div>
-            <div className="md:w-80 lg:row-span-2 bg-black lg:ml-32 lg:pl-5 lg:h-4/12 xl:row-span-2 xl:ml-0 bg-black xl:pl-5 xl:h-6/12">
+            <div className=" row-span-2 bg-black pl-5 md:w-80 md:ml-16  lg:ml-32 lg:h-4/12 xl:row-span-2 xl:ml-0 xl:h-6/12">
               <h1 className="mt-8 mb-4 text-orange-300 text-3xl font-inter font-semibold">
                 New
               </h1>
@@ -82,34 +97,34 @@ function App() {
               </p>
               <br />
             </div>
-            <div className="mt-5 grid grid-cols-2  lg:w-[600px] lg:border lg:border-red-500 xl:flex xl:w-[680px]">
-              <h1 className="text-black-300 text-5xl font-inter font-extrabold lg:w-5/6 lg:mt-2 xl:w-3/4 h-36">
+            <div className="mt-5 grid grid-cols-2 md:flex w-[400px] lg:flex lg:w-[600px] xl:flex xl:w-[680px]">
+              <h1 className="text-black-300 text-5xl font-inter font-extrabold md:w-4/5 md:font-bold md:text-4xl lg:w-5/6 lg:mt-2 xl:w-3/4 h-36">
                 The Bright Future of <br /> Web 3.0?
               </h1>
-              <div className="lg:w-full border lg:mr-3 lg:h-52 text-sm xl:w-4/5 xl:h-52">
-                <p className="line-clamp-4">
+              <div className="text-sm md:w-4/5 lg:w-full lg:h-52 xl:w-4/5 xl:h-52">
+                <p className="line-clamp-4 md:line-clamp-5">
                   We dive into the next evolution of the web that claims to put
                   the power of the platforms back into the hands of the people.
                   But is it really fulfilling its promise?
                 </p>
                 <button
                   className="bg-red-400 hover:bg-red-600 mt-10 content-center w-2/4 h-1/4 text-sm 
-                 text-white font-inter font-medium tracking-[4px]"
+                 text-white font-inter font-medium tracking-[4px] md:w-3/4 md:font-medium tracking-[3px]"
                 >
                   READ MORE
                 </button>
               </div>
             </div>
           </div>
-          <div className="lg:grid grid-cols-3 mt-20 xl:grid grid-cols-3 mt-20 w-3/4">
-            <div className="flex  w-80">
+          <div className="grid grid-cols-3 mt-20 md:w-full lg:w-[940px] xl:w-4/5 xl:flex xl:flex-between">
+            <div className=" md:md:w-[60px] md:h-[100px] lg:w-[282px] flex xl:w-80">
               <img
-                className="w-[80px] h-[105px]"
+                className="lg:w-[70px] xl:w-[80px] h-[105px]"
                 src={imageretropcs}
                 alt=""
               ></img>
-              <div className="w-56 h-28 px-4">
-                <h1 className="mb-1 text-gray-400 font-inter text-xl font-semibold">
+              <div className="w-56 h-28 md:px-2 lg:px-2 xl:px-4">
+                <h1 className="mb-1 text-gray-400 font-inter text-xl font-semibold md:text-lg">
                   01
                 </h1>
                 <h2 className="mb-1 hover:text-red-600 text-base font-bold">
@@ -120,32 +135,32 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="flex w-80 -ml-2 mr-3 ">
+            <div className="flex w-80 lg:w-72 lg:mr-0 lg:-ml-7 xl:ml-2 xl:w-80 xl:mr-7 ">
               <img
-                className="w-[80px] h-[105px]"
+                className="md:w-[60px] md:h-[100px] lg:w-[70px] lg:h-[105px] xl:w-[80px] xl:h-[105px]"
                 src={imagetoplaptops}
                 alt=""
               ></img>
-              <div className="w-56 h-28 px-4 -">
-                <h1 className="mb-1 text-gray-400 font-inter text-xl font-semibold">
+              <div className="w-56 h-28 md:px-2 lg:px-2 xl:px-4">
+                <h1 className="mb-1 text-gray-400 font-inter text-xl font-semibold md:text-lg">
                   02
                 </h1>
                 <h2 className="mb-1 hover:text-red-600 text-base font-bold">
                   Top 20 Laptops of 2022
                 </h2>
-                <p className="w-52 text-stone-400 text-sm">
+                <p className="md:w-44 w-52 text-stone-400 text-sm">
                   Our best pick for various needs and projects.
                 </p>
               </div>
             </div>
-            <div className="flex w-80 ml-4">
+            <div className="flex w-80 xl:ml-10">
               <img
-                className="w-[80px] h-[105px]"
+                className="md:md:w-[60px] md:h-[100px] lg:w-[70px] xl:w-[80px] h-[105px]"
                 src={imagegaminggrowth}
                 alt=""
               ></img>
-              <div className="w-56 h-28 px-4">
-                <h1 className="mb-1 text-gray-400 font-inter text-xl font-semibold">
+              <div className="w-56 h-28 md:px-2 lg:px-2 xl:px-4">
+                <h1 className="mb-1 text-gray-400 font-inter text-xl font-semibold md:text-lg">
                   03
                 </h1>
                 <h2 className="mb-1 hover:text-red-600 text-base font-bold">
@@ -161,13 +176,13 @@ function App() {
 
         {/* Mobile Screen */}
 
-        <div className="block overflow-y-auto mb-15 md:hidden">
-          <div className="mx-5 flex justify-between mt-9 mb-9 relative">
+        <div className= "sm:container sm:px-2 sm:block sm:mb-15 md:hidden">
+          <div className="sm:mx-3 w-full flex justify-between mt-9 mb-9 relative">
             <img src={logo} alt="icon"></img>
 
             <img
               onClick={toggleMenu}
-              className="ml-5 ease-in duration-300"
+              className="sm: ease-in duration-300"
               src={iconmenu}
               alt="icon"
               width="70px"
@@ -175,13 +190,13 @@ function App() {
 
             {isMenuOpen && <MobileMenu toggleMenu={toggleMenu} />}
           </div>
-          <img className="mx-5 w-[373px]" src={imageweb3mobile} alt=""></img>
-          <h1 className="mx-5 mt-7 mb-6 text-black-300 text-6xl font-inter font-extrabold">
+          <img className="sm:mx-2 sm:w-fit" src={imageweb3mobile} alt=""></img>
+          <h1 className="sm:mx-5 mt-7 mb-6 text-black-300 text-6xl font-inter font-extrabold">
             The Bright Future of Web 3.0?
           </h1>
           <p className="mx-5 mb-9 text-xl text-zinc-500 font-inter font-medium">
             We dive into the next evolution of the web that claims to put the
-            power of the platforms back <br />
+            power of the platforms back
             into the hands of the people. But is it really fulfilling its
             promise?
           </p>
@@ -298,18 +313,6 @@ function App() {
             >
               Emi-ife Faluyi
             </a>
-            {/* Challenge by{" "}
-            <a
-              className="text-sm font-inter"
-              href="https://www.frontendmentor.io?ref=challenge"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Frontend Mentor
-            </a>
-            . Coded by{" "}<a className="text-sm sm:text-2xl text-white" href="https://github.com/code-stormshadow">
-              Emi-ife Faluyi
-            </a> */}
             .
           </p>
         </div>
