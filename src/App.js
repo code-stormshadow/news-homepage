@@ -19,16 +19,16 @@ function App() {
   };
 
   return (
-    <div className="xl:container xl:mx-32 xl:px-18">
+    <div className="lg:container lg:mx-10 lg:px-5 xl:container xl:mx-32 xl:px-18">
       <div className="content-Div">
         <div className="hidden md:block">
-          <div className="flex mb-7 mt-5 xl:w-9/12 gap-80">
+          <div className="flex mb-7 mt-5 lg:w-[940px] lg:gap-72 xl:w-9/12 xl:gap-80">
             <div className="md:">
               <div>
-                <img className="mr-6" src={logo} alt="icon"></img>
+                <img className="mr-52" src={logo} alt="icon"></img>
               </div>
             </div>
-            <div className="flex xl:space-x-6 w-3/3 mt-3 ml-64">
+            <div className="flex space-x-6 w-3/3 mt-3 ml-12">
               <h2 className=" hover:text-red-600 font-inter text-base font-light">
                 Home
               </h2>
@@ -46,11 +46,11 @@ function App() {
               </h3>
             </div>
           </div>
-          <div className="font-inter xl:grid grid-cols-2 grid-rows-2 gap-6 w-full">
-            <div className="lg:flex col-span-1">
-              <img className="w-[650x]" src={imageWebdesktop} alt=""></img>
+          <div className="font-inter flex lg:w-full lg:grid lg:grid-cols-2 lg:grid-rows-2 xl:font-inter xl:grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-6 xl:w-full">
+            <div className="lg:w-max lg:h-[270px] border border-black xl:flex xl:w-full xl:col-span-1 xl:h-full">
+              <img className="lg:w-[600px] lg:h-[270px] xl:w-[690px]" src={imageWebdesktop} alt=""></img>
             </div>
-            <div className="lg: row-span-2 bg-black pl-5 md:w-80 h-6/12">
+            <div className="md:w-80 lg:row-span-2 bg-black lg:ml-32 lg:pl-5 lg:h-4/12 xl:row-span-2 xl:ml-0 bg-black xl:pl-5 xl:h-6/12">
               <h1 className="mt-8 mb-4 text-orange-300 text-3xl font-inter font-semibold">
                 New
               </h1>
@@ -82,11 +82,11 @@ function App() {
               </p>
               <br />
             </div>
-            <div className="flex justify-between mt-3">
-              <h1 className=" xl:w-3/4 h-36 mt-2 mr-5 text-black-300 text-5xl font-inter font-extrabold">
+            <div className="mt-5 grid grid-cols-2  lg:w-[600px] lg:border lg:border-red-500 xl:flex xl:w-[680px]">
+              <h1 className="text-black-300 text-5xl font-inter font-extrabold lg:w-5/6 lg:mt-2 xl:w-3/4 h-36">
                 The Bright Future of <br /> Web 3.0?
               </h1>
-              <div className="w-4/5 h-52 text-sm">
+              <div className="lg:w-full border lg:mr-3 lg:h-52 text-sm xl:w-4/5 xl:h-52">
                 <p className="line-clamp-4">
                   We dive into the next evolution of the web that claims to put
                   the power of the platforms back into the hands of the people.
@@ -101,7 +101,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3 mt-20 w-3/4">
+          <div className="lg:grid grid-cols-3 mt-20 xl:grid grid-cols-3 mt-20 w-3/4">
             <div className="flex  w-80">
               <img
                 className="w-[80px] h-[105px]"
