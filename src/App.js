@@ -98,10 +98,10 @@ function App() {
               <br />
             </div>
             <div className="mt-5 grid grid-cols-2 md:flex w-[400px] lg:flex lg:w-[600px] xl:flex xl:w-[680px]">
-              <h1 className="text-black-300 text-5xl font-inter font-extrabold md:w-4/5 md:font-bold md:text-4xl lg:w-5/6 lg:mt-2 xl:w-3/4 h-36">
+              <h1 className="text-black-300 text-5xl font-inter font-extrabold md:w-4/5 md:font-bold md:text-4xl lg:w-5/6 lg:mt-2 xl:w-2/4 h-36 xl:font-extrabold xl:text-5xl">
                 The Bright Future of <br /> Web 3.0?
               </h1>
-              <div className="text-sm md:w-4/5 lg:w-full lg:h-52 xl:w-4/5 xl:h-52">
+              <div className="text-sm md:w-4/5 lg:w-full lg:h-52 xl:w-80 xl:h-52">
                 <p className="line-clamp-4 md:line-clamp-5">
                   We dive into the next evolution of the web that claims to put
                   the power of the platforms back into the hands of the people.
